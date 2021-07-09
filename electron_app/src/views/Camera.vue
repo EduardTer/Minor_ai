@@ -153,7 +153,7 @@ export default {
     this.ctx.translate(this.canvas.width, 0);
     this.ctx.scale(-1, 1);
     this.ourModel = await tensor.loadLayersModel(
-      "https://fysiomodelstorage.z6.web.core.windows.net/model.json"
+      "https://fysiomodel.z6.web.core.windows.net/model.json"
     );
     this.interval = setInterval(this.recognizePose, 100);
     this.loop();
@@ -233,7 +233,7 @@ export default {
       // );
       if (
         this.poseNames[this.poseDetectedIndex] === this.exercise.poses[this.poseIndex] && 
-        this.ourModelOutPut[this.poseDetectedIndex] > 0.5
+        this.ourModelOutPut[this.poseDetectedIndex] > 0.3
       ) {
         this.makeToast(
           "voltooid!",

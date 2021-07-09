@@ -1,5 +1,5 @@
 const GET_API_URL = () => {
-        return 'https://fysioapi2.azurewebsites.net'
+        return 'https://fysio.azurewebsites.net'
 }
 
 const GET_LOGIN_ENDPOINT = (state, getters, rootState, rootGetters) => {
